@@ -15,52 +15,70 @@ def populate():
 
         atividades_teste = [
             {
-                "funcional": "12345",
-                "nome": "Basquete",
-                "descricao": "Treino de basquete",
-                "tipo": "Esporte",
-                "duracao": 60,
-                "distancia": 0,
-                "intensidade": "Alta",
-                "data": datetime.strptime("2025-01-15", "%Y-%m-%d"),
-                "calorias": 500
+                "funcional": "1234567",
+                "dataHora": "2000-09-30T07:30:00",
+                "codigoAtividade": "RUN",
+                "descricaoAtividade": "Correr 5km"
             },
             {
-                "funcional": "12345",
-                "nome": "Corrida",
-                "descricao": "Corrida leve no parque",
-                "tipo": "Cardio",
-                "duracao": 30,
-                "distancia": 5.0,
-                "intensidade": "Média",
-                "data": datetime.strptime("2025-01-16", "%Y-%m-%d"),
-                "calorias": 300
+                "funcional": "1234568",
+                "dataHora": "2001-01-15T18:45:00",
+                "codigoAtividade": "BIKE",
+                "descricaoAtividade": "Pedalar 20km"
             },
             {
-                "funcional": "12345",
-                "nome": "Yoga",
-                "descricao": "Sessão de Yoga matinal",
-                "tipo": "Alongamento",
-                "duracao": 45,
-                "distancia": 0,
-                "intensidade": "Baixa",
-                "data": "2025-01-17",
-                "calorias": 150
+                "funcional": "1234569",
+                "dataHora": "2002-03-10T06:15:00",
+                "codigoAtividade": "SWIM",
+                "descricaoAtividade": "Nadar 1km"
             },
-            {"funcional": "001", "nome": "Basquete", "descricao": "Treino de basquete", "tipo": "Esporte", "duracao": 60, "distancia": 0, "intensidade": "Alta", "data": "2025-01-19", "calorias": 500},
-            {"funcional": "002", "nome": "Corrida", "descricao": "Corrida leve no parque", "tipo": "Cardio", "duracao": 30, "distancia": 5.0, "intensidade": "Média", "data": "2025-01-20", "calorias": 300},
-            {"funcional": "003", "nome": "Yoga", "descricao": "Sessão de Yoga matinal", "tipo": "Alongamento", "duracao": 45, "distancia": 0, "intensidade": "Baixa", "data": "2025-01-21", "calorias": 150},
-            {"funcional": "004", "nome": "Natação", "descricao": "Treino de natação", "tipo": "Esporte", "duracao": 50, "distancia": 1.2, "intensidade": "Alta", "data": "2025-01-22", "calorias": 400},
-            {"funcional": "005", "nome": "Caminhada", "descricao": "Caminhada no parque", "tipo": "Cardio", "duracao": 40, "distancia": 3.5, "intensidade": "Média", "data": "2025-01-23", "calorias": 250},
-            {"funcional": "006", "nome": "Pilates", "descricao": "Treino de Pilates", "tipo": "Alongamento", "duracao": 55, "distancia": 0, "intensidade": "Baixa", "data": "2025-01-24", "calorias": 200},
-            {"funcional": "007", "nome": "Futebol", "descricao": "Treino de futebol", "tipo": "Esporte", "duracao": 70, "distancia": 2.5, "intensidade": "Alta", "data": "2025-01-25", "calorias": 600},
-            {"funcional": "008", "nome": "Spinning", "descricao": "Aula de spinning", "tipo": "Cardio", "duracao": 45, "distancia": 0, "intensidade": "Alta", "data": "2025-01-26", "calorias": 450},
-            {"funcional": "009", "nome": "Treino funcional", "descricao": "Treino com pesos e resistência", "tipo": "Musculação", "duracao": 60, "distancia": 0, "intensidade": "Alta", "data": "2025-01-27", "calorias": 500},
-            {"funcional": "010", "nome": "Meditação", "descricao": "Sessão de meditação", "tipo": "Relaxamento", "duracao": 30, "distancia": 0, "intensidade": "Baixa", "data": "2025-01-28", "calorias": 50},
+            {
+                "funcional": "1234570",
+                "dataHora": "2003-05-05T19:00:00",
+                "codigoAtividade": "GYM",
+                "descricaoAtividade": "Treino de musculação"
+            },
+            {
+                "funcional": "1234571",
+                "dataHora": "2004-07-21T07:10:00",
+                "codigoAtividade": "RUN",
+                "descricaoAtividade": "Corrida de 10km"
+            },
+            {
+                "funcional": "1234572",
+                "dataHora": "2005-09-12T12:30:00",
+                "codigoAtividade": "HIKE",
+                "descricaoAtividade": "Trilha de 5km"
+            },
+            {
+                "funcional": "1234573",
+                "dataHora": "2006-11-30T16:00:00",
+                "codigoAtividade": "ROW",
+                "descricaoAtividade": "Remar por 45 minutos"
+            },
+            {
+                "funcional": "1234574",
+                "dataHora": "2007-02-14T20:20:00",
+                "codigoAtividade": "BOX",
+                "descricaoAtividade": "Treino de boxe"
+            },
+            {
+                "funcional": "1234575",
+                "dataHora": "2008-04-28T08:40:00",
+                "codigoAtividade": "RUN",
+                "descricaoAtividade": "Corrida leve de 3km"
+            },
+            {
+                "funcional": "1234576",
+                "dataHora": "2009-08-09T17:25:00",
+                "codigoAtividade": "YOGA",
+                "descricaoAtividade": "Sessão de yoga 1h"
+            }
         ]
 
         with app.app_context():
             for data in atividades_teste:
+                data["dataHora"] = datetime.fromisoformat(data["dataHora"])
                 AtividadeRepository.create(data)
 
         logger.success("Banco de dados populado com sucesso!")

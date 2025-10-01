@@ -5,31 +5,18 @@ class Atividade(db_atividades.Model):
 
     id = db_atividades.Column(db_atividades.Integer, primary_key=True)
     funcional = db_atividades.Column(db_atividades.String(50), nullable=False)
-    nome = db_atividades.Column(db_atividades.String(100), nullable=False)
-    descricao = db_atividades.Column(db_atividades.Text)
-    tipo = db_atividades.Column(db_atividades.String(50))
-    duracao = db_atividades.Column(db_atividades.Integer)
-    distancia = db_atividades.Column(db_atividades.Float)
-    intensidade = db_atividades.Column(db_atividades.String(20))
-    data = db_atividades.Column(db_atividades.Date)
-    calorias = db_atividades.Column(db_atividades.Integer)
+    dataHora = db_atividades.Column(db_atividades.DateTime, nullable=False)
+    codigoAtividade = db_atividades.Column(db_atividades.String(50), nullable=False)
+    descricaoAtividade = db_atividades.Column(db_atividades.Text, nullable=True)
 
     def __repr__(self):
-        return (
-            f"<Atividade id={self.id} nome={self.nome} funcional={self.funcional} "
-            f"tipo={self.tipo} data={self.data}>"
-        )
-    
+        return f"<Atividade id={self.id} funcional={self.funcional} codigoAtividade={self.codigoAtividade} dataHora={self.dataHora}>"
+
     def to_dict(self):
         return {
             "id": self.id,
             "funcional": self.funcional,
-            "nome": self.nome,
-            "descricao": self.descricao,
-            "tipo": self.tipo,
-            "duracao": self.duracao,
-            "distancia": self.distancia,
-            "intensidade": self.intensidade,
-            "data": self.data.strftime("%d/%m/%Y") if self.data else None,
-            "calorias": self.calorias
+            "dataHora": self.dataHora.isoformat() if self.dataHora else None,
+            "codigoAtividade": self.codigoAtividade,
+            "descricaoAtividade": self.descricaoAtividade
         }

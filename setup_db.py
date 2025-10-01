@@ -2,7 +2,6 @@ from flask import Flask
 from app.routes.atividades_routes import atividades
 from app.models.atividade_model import Atividade
 from flask_sqlalchemy import SQLAlchemy
-from app.extensions import db_atividades
 import os
 from loguru import logger
 from dotenv import load_dotenv
@@ -10,6 +9,7 @@ import pymysql
 
 load_dotenv()
 
+db_atividades = SQLAlchemy()
 
 DB_HOST = os.getenv('DB_HOST', '127.0.0.1')
 DB_PORT = int(os.getenv('DB_PORT', 3306))

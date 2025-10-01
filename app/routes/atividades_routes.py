@@ -12,10 +12,9 @@ atividades_schema = AtividadeSchema(many=True)
 @atividades.route("/", methods=["POST"])
 def create_atividade():
     try:
-
+        
         data = atividade_schema.load(request.json)
         atividade = AtividadeService.criar_atividade(data)
-        logger.info(f"Atividade criada: {atividade.id} funcional={atividade.funcional}")
         return jsonify({"message": "Atividade criada!", "id": atividade.id}), 201
     except ValidationError as err:
 
@@ -30,25 +29,38 @@ def create_atividade():
 @atividades.route("/", methods=["GET"])
 def get_atividades():
     try:
+        filters = {}
+        codigoAtividade = request.args.get("codigoAtividade")
+        dataHora_inicio = request.args.get("dataHora_inicio")
+        dataHora_fim = request.args.get("dataHora_fim")
 
+        if codigoAtividade:
+            filters["codigoAtividade"] = codigoAtividade
+        if dataHora_inicio and dataHora_fim:
+            filters["dataHora_inicio"] = dataHora_inicio
+            filters["dataHora_fim"] = dataHora_fim
+        
+        # Se não houver filtros nem paginação, retorna todos
+        if not filters and not request.args.get("page") and not request.args.get("per_page"):
+            atividades_list = AtividadeService.buscar_todas()
+            return jsonify({
+                "itens": atividades_schema.dump(atividades_list),
+                "total": len(atividades_list)
+            }), 200
+        
+        # Paginação + filtros
         page = int(request.args.get("page", 1))
         per_page = int(request.args.get("per_page", 10))
+        atividades_pag = AtividadeService.listar_atividades(page, per_page, filters)
 
-
-        filters = {}
-        tipo = request.args.get("tipo")
-        data_inicio = request.args.get("data_inicio")
-        data_fim = request.args.get("data_fim")
-
-        if tipo:
-            filters["tipo"] = tipo
-        if data_inicio and data_fim:
-            filters["data_inicio"] = data_inicio
-            filters["data_fim"] = data_fim
-
-        atividades = AtividadeService.listar_atividades(page, per_page, filters)
-
-        return jsonify(atividades), 200
+        return jsonify({
+            "itens": atividades_pag["items"],
+            "total": atividades_pag["total"],
+            "page": atividades_pag["page"],
+            "pages": atividades_pag["pages"],
+            "per_page": atividades_pag["per_page"]
+        }), 200
+    
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
@@ -56,39 +68,8 @@ def get_atividades():
 def get_atividades_by_funcional(funcional):
     try:
         atividades_list = AtividadeService.buscar_por_funcional(funcional)
-        return jsonify(atividades_schema.dump(atividades_list)), 200
+        return jsonify({"itens": atividades_schema.dump(atividades_list), "total": len(atividades_list)}), 200
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
-    
-@atividades.route("/<int:id>", methods=["PUT"])
-def edit_atividade_by_id(id):
-    try:
-        data = atividade_schema.load(request.json, partial=True) 
-        atividade = AtividadeService.editar_atividade(id, data)
-        if not atividade:
-            return jsonify({"error": "Atividade não encontrada"}), 404
-
-        logger.info(f"Atividade editada: {atividade.id} funcional={atividade.funcional}")
-        return jsonify({"message": "Atividade editada!", "atividade": atividade_schema.dump(atividade)}), 200
-    except ValidationError as err:
-        logger.warning(f"Erro de validação: {err.messages}")
-        return jsonify({"error": err.messages}), 400
-    except Exception as e:
-        logger.error(f"Erro ao editar atividade: {e}", exc_info=True)
-        return jsonify({"error": str(e)}), 500
-
-
-@atividades.route("/<int:id>", methods=["DELETE"])
-def delete_atividade_by_id(id):
-    try:
-        deleted = AtividadeService.deletar_atividade(id)
-        if not deleted:
-            return jsonify({"error": "Atividade não encontrada"}), 404
-
-        logger.info(f"Atividade deletada: {id}")
-        return jsonify({"message": f"Atividade {id} deletada com sucesso!"}), 200
-    except Exception as e:
-        logger.error(f"Erro ao deletar atividade: {e}", exc_info=True)
         return jsonify({"error": str(e)}), 500
     
 
