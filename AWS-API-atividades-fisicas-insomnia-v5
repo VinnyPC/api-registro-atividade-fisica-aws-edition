@@ -1,0 +1,447 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1733692900341
+  modified: 1733692900341
+  description: ""
+collection:
+  - name: Outros projetos
+    meta:
+      id: fld_97217a7ee56d4408914093f0a8dbe607
+      created: 1758841460643
+      modified: 1758841460643
+      sortKey: -1758841460643
+      description: ""
+    children:
+      - name: Joguinho da vida
+        meta:
+          id: fld_0f64e53ea83545dc81050e62bf3221b1
+          created: 1752187214632
+          modified: 1758841481691
+          sortKey: -1758841476523
+          description: ""
+        children:
+          - name: Auth
+            meta:
+              id: fld_afb8934ea3eb46128b2fde9fe0be0a86
+              created: 1752187790042
+              modified: 1752187792582
+              sortKey: -1752187790042
+              description: ""
+          - name: Categorias
+            meta:
+              id: fld_9f0217bfa98847789038c503669cb891
+              created: 1752351173384
+              modified: 1752351173384
+              sortKey: -1752351173384
+              description: ""
+          - name: Missão
+            meta:
+              id: fld_ebc8c178e136489d8dcf677ab0a8b924
+              created: 1752351199303
+              modified: 1752351213552
+              sortKey: -1752351199503
+              description: ""
+          - name: Usuario
+            meta:
+              id: fld_6e71a157c9304b32bde0628a7c429cfe
+              created: 1752431707994
+              modified: 1752431722398
+              sortKey: -1752431708194
+              description: ""
+          - name: Missoes usuario
+            meta:
+              id: fld_119e284af92b4f899ed00e2c8d265658
+              created: 1752528912998
+              modified: 1752528915259
+              sortKey: -1752431708294
+              description: ""
+      - name: JWT Token
+        meta:
+          id: fld_3770cfa763d0447dae2a249561ac873c
+          created: 1755216290091
+          modified: 1758841480051
+          sortKey: -1758841476423
+          description: ""
+      - name: My Collection
+        meta:
+          id: fld_290232f9fc9340d3ad06df2b99daac36
+          created: 1755731393713
+          modified: 1758841476343
+          sortKey: -1758841476323
+          description: |-
+            ### Welcome to Postman! This is your first collection. 
+
+            Collections are your starting point for building and testing APIs. You can use this one to:
+
+            • Group related requests
+            • Test your API in real-world scenarios
+            • Document and share your requests
+
+            Update the name and overview whenever you’re ready to make it yours.
+
+            [Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)
+        children:
+          - name: Usuarios
+            meta:
+              id: fld_1ed18cc78da54c7296cb3e4c77559f34
+              created: 1755731393715
+              modified: 1758595134935
+              sortKey: -1755731392022
+              description: ""
+          - name: Missao
+            meta:
+              id: fld_05d545e0d7a1451da2d5c8e0bdc5c66b
+              created: 1755821089737
+              modified: 1758593741157
+              sortKey: -1755473841056.5
+              description: ""
+  - name: Atividades físicas dos funcionários CRUD
+    meta:
+      id: fld_be32b6ba3ee04d4c8e96e75ca51887fb
+      created: 1759005800630
+      modified: 1759005808364
+      sortKey: -1757283476922
+      description: ""
+  - name: Atividades físicas dos funcionários API
+    meta:
+      id: fld_994e6ce2bb504d508c98fa491aa79130
+      created: 1759184030108
+      modified: 1759184030108
+      sortKey: -1756507434472
+      description: ""
+    children:
+      - url: https://nucu3l8xaf.execute-api.us-east-1.amazonaws.com/dev/atividades
+        name: Registrar uma nova atividade física
+        meta:
+          id: req_a3de48a357984e79bc8783c316ecdda0
+          created: 1759184030109
+          modified: 1759284447305
+          isPrivate: false
+          description: ""
+          sortKey: -1758835572267
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "funcional":"12345",
+              "dataHora":"2025-09-25T08:26:00",
+              "codigoAtividade":"GYM",
+              "descricaoAtividade":"correr 5km GTW"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://nucu3l8xaf.execute-api.us-east-1.amazonaws.com/dev/atividades/
+        name: Listar todas as atividades registradas
+        meta:
+          id: req_0cb1a0b9494f49c18bed6b655f9d436d
+          created: 1759184030110
+          modified: 1759289282819
+          isPrivate: false
+          description: ""
+          sortKey: -1757283482144
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_af715dfbb6a445398f69ad196c40657d
+            disabled: false
+          - name: User-Agent
+            value: insomnia/11.6.1
+            id: pair_53b5642718854ef3aed0092dea04d004
+            disabled: false
+          - id: pair_db3a8c9da92649b9aef3bc739c1684cf
+            name: Authorization
+            value: Bearer
+              eyJraWQiOiJ0TVpUZXJvWURRZFkzM3JTSnBPODBnNTREQlhleHNHcXRTMVZNNkU4ZjRJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiZTZpU21NLUNVVVd5RUM4RUpMYkVrdyIsInN1YiI6ImI0MzhjNDQ4LTIwYTEtNzAzMS0wMmVjLWZhYjU3OGY2OTdkYyIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xXzJXelJUSkpIZyIsImNvZ25pdG86dXNlcm5hbWUiOiJ2aW5pY2l1cyIsIm9yaWdpbl9qdGkiOiJjM2E0ZDc4OS04NmY3LTQ2ZDQtYTFiZS04ZjNjMGIzZmY2NmMiLCJhdWQiOiI2OTZ0NTBoM3QxYTlsaHRyc2xvNjJjdTA3biIsImV2ZW50X2lkIjoiYmUxMzAyZGEtNDIzYS00YjFkLTg1ZjYtNDkzZTg0YWIxYTU2IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3NTkyODg0MDcsImV4cCI6MTc1OTI5MjAwNywiaWF0IjoxNzU5Mjg4NDA3LCJqdGkiOiJhYmU2OWY1Ny00ZjgwLTQyZTktYTE2My0yNjFlNGJlYTIwMjciLCJlbWFpbCI6InZpbmljaXVzQGdtYWlsLmNvbSJ9.PS2BrIyRe3Ri08URFO8duzZNQT3CnPmvuerVNdGPWgBvEaw4D6tcFyukzsCMPmnFcZf4KsLcXwQuOVKNdqsczI9rVdEDtnyuqEAgei3_7swJn8gmrncbwB7cGZyuGF4n_XMMkUGpA6p1Kdby_-Xng3_H31F4pLKvKQrB4DJdHS1HFxR9IGGOv9pepdbfNrojstzF0FgUjPTGBPjNavMafpJ7KArkklTUfaQSgHfrcR9_oswZvRigqhGLTRTzm_u5MlLCEOzXAzrt_ux2Lrm6w9q7KXsHz2D5ttkfwTfDd6jG_DNWgo9LWBbaC1J9TRpdFfdVIuzFEJkbSQwGl3MiGw
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://nucu3l8xaf.execute-api.us-east-1.amazonaws.com/dev/atividades/1234567
+        name: Listar todas as atividades de um funcionário específico
+        meta:
+          id: req_a36749c1b3ce4dd0a23fd1b639b25543
+          created: 1759184030111
+          modified: 1759287233667
+          isPrivate: false
+          description: ""
+          sortKey: -1756507437082.5
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://nucu3l8xaf.execute-api.us-east-1.amazonaws.com/dev/atividades/3
+        name: Editar uma atividade física com ID
+        meta:
+          id: req_fd8d6e0fefe54c4fbd5bf8ec57d9d779
+          created: 1759184030112
+          modified: 1759285358307
+          isPrivate: false
+          description: ""
+          sortKey: -1758059527205.5
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            		{
+            			"codigoAtividade": "RUN",
+            			"dataHora": "2025-09-30T15:30:00",
+            			"descricaoAtividade": "Outra atividade registrada",
+            			"funcional": "789123"
+            		}
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://nucu3l8xaf.execute-api.us-east-1.amazonaws.com/dev/atividades/1
+        name: Deletar uma atividade física com ID
+        meta:
+          id: req_9d61325aa0b14d29821be1c4ccd92bf1
+          created: 1759184030113
+          modified: 1759287172638
+          isPrivate: false
+          description: ""
+          sortKey: -1757671504674.75
+        method: DELETE
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://nucu3l8xaf.execute-api.us-east-1.amazonaws.com/dev/atividades?page=1&per_page=100
+        name: Listar todas as atividades registradas (paginação)
+        meta:
+          id: req_3f5cc26e770b4b11b66c705d14b53011
+          created: 1759184030114
+          modified: 1759287196812
+          isPrivate: false
+          description: ""
+          sortKey: -1756895459613.25
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://nucu3l8xaf.execute-api.us-east-1.amazonaws.com/dev/atividades?dataHora_inicio=1999-09-30T07:30:00&dataHora_fim=2001-01-01T07:30:00
+        name: Listar todas as atividades registradas (data)
+        meta:
+          id: req_979f8677553a41b49fb213426efe67a1
+          created: 1759184030115
+          modified: 1759287186347
+          isPrivate: false
+          description: ""
+          sortKey: -1757089470878.625
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://nucu3l8xaf.execute-api.us-east-1.amazonaws.com/dev/atividades?dataHora_inicio=1999-09-30T07:30:00&dataHora_fim=2001-01-01T07:30:00
+        name: Listar todas as atividades registradas varios filtros
+        meta:
+          id: req_95bc74581d7d443694eb25650a3985cf
+          created: 1759284019796
+          modified: 1759287191329
+          isPrivate: false
+          description: ""
+          sortKey: -1757040968062.2812
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - name: JWT Token 2
+        meta:
+          id: fld_48406fc9955a40ed907b9c7c74c933e4
+          created: 1759288262742
+          modified: 1759288292295
+          sortKey: -1759287623209
+          description: ""
+        children:
+          - url: https://nucu3l8xaf.execute-api.us-east-1.amazonaws.com/dev/atividades
+            name: Request Token
+            meta:
+              id: req_7f1b03c1dbc94bfdab9b57214a41c142
+              created: 1759288262744
+              modified: 1759289916017
+              isPrivate: false
+              description: ""
+              sortKey: -1755221365655
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.4.0
+                id: pair_d9d1cbf2d42f42d4a20a4ce8cfc6c9be
+                disabled: true
+              - id: pair_82eaddd3372c4426ae4a41b7d0af5b7b
+                name: Authorization
+                value: Bearer
+                  eyJraWQiOiJ2b3hKdkRpa2owbCtVVHZ0NFhUS0lhYVBmcVhzdENBeTg3NTlic0VyM3lRPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiZXhXTkktN2NwTmFoMnQxQXdxWFZDUSIsInN1YiI6IjA0NjgxNDk4LTUwODEtNzBiMS1mNGM3LTQ2ZmJlMmJlZDQyNCIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV84M2p1NGJCbHkiLCJjb2duaXRvOnVzZXJuYW1lIjoiMDQ2ODE0OTgtNTA4MS03MGIxLWY0YzctNDZmYmUyYmVkNDI0Iiwib3JpZ2luX2p0aSI6IjYyNGE0MzQ0LWYxZTktNDkwNC1hODgxLTNiMTVkNmQwZjZkMCIsImF1ZCI6IjNnOWlmb2Vnc2QydThkazl0bjltOTU2Z2doIiwiZXZlbnRfaWQiOiI4NzA3NzgxNC02ODAyLTRmMGMtODM3YS00NjNmZThjZTJlZWIiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTc1NTczMTQ1MCwiZXhwIjoxNzU1NzM1MDUwLCJpYXQiOjE3NTU3MzE0NTAsImp0aSI6ImQyZGI5ZjU1LTIzYjYtNDJjZC1iZDc2LWExNzIwMjEwZDFjNyIsImVtYWlsIjoidmluaWNpdXNAZ21haWwuY29tIn0.H4cviOUN06c2vz3rxct98dRDbcgDIVSjUbIOTopxNyVYMTnZd3ilJeo7ckdFIQEyuzFUcT0zoMiNujI7odngGDB2FPpxGixifTi2XYYm4CfXxjlXrkjVkAIabIluKMBd0DqrPVj5_JUCU5ygJu9Ex3ma95npm03ymoA_8FHixGuULyEm8GeCAydWg0BiX19Y7QiSNbGuNIqE2RrU8bwI8bprqb7DZGHJkZCnY-ScyL1NagVB01ZeuUC473calMG0NIcI4dIjDqW_Yd45fBIn1Z60HjwXaN_ILp1sX_o_WKU3eylam8WLHBEApzJDlVyOR0bxZT7ZlCFdzWgjJoOf6A
+                description: ""
+                disabled: false
+                type: text
+                multiline: false
+            authentication:
+              type: oauth2
+              grantType: authorization_code
+              credentialsInBody: true
+              authorizationUrl: https://us-east-12wzrtjjhg.auth.us-east-1.amazoncognito.com/oauth2/authorize
+              accessTokenUrl: https://us-east-12wzrtjjhg.auth.us-east-1.amazoncognito.com/oauth2/token
+              clientId: 696t50h3t1a9lhtrslo62cu07n
+              disabled: false
+              redirectUrl: https://oauth.pstmn.io/v1/callback
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+  - name: "Atividades físicas dos funcionários "
+    meta:
+      id: fld_3f428850a4444145b2af529e40461ccf
+      created: 1759197695041
+      modified: 1759197695041
+      sortKey: -1756895455697
+      description: ""
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1733692916427
+    modified: 1759288570345
+  cookies:
+    - key: XSRF-TOKEN
+      value: a67a0078-8bd9-4e9d-b93f-c06fe7b3adb1
+      domain: us-east-1yhi78jvvh.auth.us-east-1.amazoncognito.com
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-08-15T00:50:28.639Z
+      lastAccessed: 2025-08-15T00:50:28.639Z
+      id: 0b822d56-02a0-4ef3-ad81-3642ca2cc85d
+    - key: XSRF-TOKEN
+      value: 03b6220e-5139-46f0-ada4-bf01049f8fb4
+      domain: us-east-183ju4bbly.auth.us-east-1.amazoncognito.com
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-08-16T21:03:56.979Z
+      lastAccessed: 2025-08-16T21:03:56.979Z
+      id: 2b42b79c-efe1-4bc3-b6de-d9a68b2ade6c
+    - key: XSRF-TOKEN
+      value: b2b884e0-e5ab-409e-841a-5ed2dec7294a
+      domain: us-east-12wzrtjjhg.auth.us-east-1.amazoncognito.com
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-10-01T03:16:10.345Z
+      lastAccessed: 2025-10-01T03:16:10.345Z
+      sameSite: lax
+      id: cfc28648-6aa3-43b7-9ea5-c357acd2c3e9
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1733692916316
+    modified: 1758595134934
+    isPrivate: false
+  data:
+    COGNITO_TOKEN: "{% AwsCognitoToken 'vinicius', 'Ab@caxi13', 'us-east-1',
+      '5g7up90gs89nb87tj2od4e2qun', 'access', '' %}"

@@ -1,0 +1,707 @@
+{
+	"log": {
+		"version": "1.2",
+		"creator": {
+			"name": "Insomnia REST Client",
+			"version": "insomnia.desktop.app:v11.6.1"
+		},
+		"entries": [
+			{
+				"startedDateTime": "2025-10-01T04:51:06.049Z",
+				"time": 519.081,
+				"request": {
+					"method": "POST",
+					"url": "https://nucu3l8xaf.execute-api.us-east-1.amazonaws.com/dev/atividades",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"funcional\":\"12345\",\n  \"dataHora\":\"2025-09-25T08:26:00\",\n  \"codigoAtividade\":\"GYM\",\n  \"descricaoAtividade\":\"correr 5km GTW\"\n}\n"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 201,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "date",
+							"value": "Wed, 01 Oct 2025 02:07:41 GMT"
+						},
+						{
+							"name": "content-type",
+							"value": "application/json"
+						},
+						{
+							"name": "content-length",
+							"value": "39"
+						},
+						{
+							"name": "x-amzn-requestid",
+							"value": "b98ab857-d120-4c73-a7c3-cb0c15316546"
+						},
+						{
+							"name": "x-amzn-remapped-content-length",
+							"value": "39"
+						},
+						{
+							"name": "x-amzn-remapped-connection",
+							"value": "close"
+						},
+						{
+							"name": "x-amz-apigw-id",
+							"value": "Rvr1NGn6oAMEWUQ="
+						},
+						{
+							"name": "x-amzn-remapped-server",
+							"value": "Werkzeug/3.1.3 Python/3.11.13"
+						},
+						{
+							"name": "x-amzn-remapped-date",
+							"value": "Wed, 01 Oct 2025 02:07:41 GMT"
+						}
+					],
+					"content": {
+						"size": 39,
+						"mimeType": "application/json",
+						"text": "{\"id\":4,\"message\":\"Atividade criada!\"}\n"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 519.081,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Registrar uma nova atividade física"
+			},
+			{
+				"startedDateTime": "2025-10-01T04:51:06.049Z",
+				"time": 141.286,
+				"request": {
+					"method": "PUT",
+					"url": "https://nucu3l8xaf.execute-api.us-east-1.amazonaws.com/dev/atividades/3",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "\t\t{\n\t\t\t\"codigoAtividade\": \"RUN\",\n\t\t\t\"dataHora\": \"2025-09-30T15:30:00\",\n\t\t\t\"descricaoAtividade\": \"Outra atividade registrada\",\n\t\t\t\"funcional\": \"789123\"\n\t\t}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 500,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "date",
+							"value": "Wed, 01 Oct 2025 02:19:56 GMT"
+						},
+						{
+							"name": "content-type",
+							"value": "application/json"
+						},
+						{
+							"name": "content-length",
+							"value": "122"
+						},
+						{
+							"name": "x-amzn-requestid",
+							"value": "f260a77a-fc82-4698-b9be-0b2fba44550a"
+						},
+						{
+							"name": "x-amzn-remapped-content-length",
+							"value": "122"
+						},
+						{
+							"name": "x-amzn-remapped-connection",
+							"value": "close"
+						},
+						{
+							"name": "x-amz-apigw-id",
+							"value": "RvtoEFO_IAMEEsA="
+						},
+						{
+							"name": "x-amzn-remapped-server",
+							"value": "Werkzeug/3.1.3 Python/3.11.13"
+						},
+						{
+							"name": "x-amzn-remapped-date",
+							"value": "Wed, 01 Oct 2025 02:19:56 GMT"
+						}
+					],
+					"content": {
+						"size": 122,
+						"mimeType": "application/json",
+						"text": "{\"details\":\"405 Method Not Allowed: The method is not allowed for the requested URL.\",\"error\":\"Erro interno no servidor\"}\n"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 141.286,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Editar uma atividade física com ID"
+			},
+			{
+				"startedDateTime": "2025-10-01T04:51:06.049Z",
+				"time": 156.666,
+				"request": {
+					"method": "DELETE",
+					"url": "https://nucu3l8xaf.execute-api.us-east-1.amazonaws.com/dev/atividades/1",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "date",
+							"value": "Wed, 01 Oct 2025 02:50:11 GMT"
+						},
+						{
+							"name": "content-type",
+							"value": "application/json"
+						},
+						{
+							"name": "content-length",
+							"value": "48"
+						},
+						{
+							"name": "x-amzn-requestid",
+							"value": "e6a93983-5e5f-425a-b76b-3239da2b281c"
+						},
+						{
+							"name": "x-amzn-remapped-content-length",
+							"value": "48"
+						},
+						{
+							"name": "x-amzn-remapped-connection",
+							"value": "close"
+						},
+						{
+							"name": "x-amz-apigw-id",
+							"value": "RvyDlH1uoAMENmA="
+						},
+						{
+							"name": "x-amzn-remapped-server",
+							"value": "Werkzeug/3.1.3 Python/3.11.13"
+						},
+						{
+							"name": "x-amzn-remapped-date",
+							"value": "Wed, 01 Oct 2025 02:50:11 GMT"
+						}
+					],
+					"content": {
+						"size": 48,
+						"mimeType": "application/json",
+						"text": "{\"message\":\"Atividade 1 deletada com sucesso!\"}\n"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 156.666,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar uma atividade física com ID"
+			},
+			{
+				"startedDateTime": "2025-10-01T04:51:06.049Z",
+				"time": 179.79500000000002,
+				"request": {
+					"method": "GET",
+					"url": "https://nucu3l8xaf.execute-api.us-east-1.amazonaws.com/dev/atividades/",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Authorization",
+							"value": "Bearer eyJraWQiOiJ0TVpUZXJvWURRZFkzM3JTSnBPODBnNTREQlhleHNHcXRTMVZNNkU4ZjRJPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiZTZpU21NLUNVVVd5RUM4RUpMYkVrdyIsInN1YiI6ImI0MzhjNDQ4LTIwYTEtNzAzMS0wMmVjLWZhYjU3OGY2OTdkYyIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xXzJXelJUSkpIZyIsImNvZ25pdG86dXNlcm5hbWUiOiJ2aW5pY2l1cyIsIm9yaWdpbl9qdGkiOiJjM2E0ZDc4OS04NmY3LTQ2ZDQtYTFiZS04ZjNjMGIzZmY2NmMiLCJhdWQiOiI2OTZ0NTBoM3QxYTlsaHRyc2xvNjJjdTA3biIsImV2ZW50X2lkIjoiYmUxMzAyZGEtNDIzYS00YjFkLTg1ZjYtNDkzZTg0YWIxYTU2IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3NTkyODg0MDcsImV4cCI6MTc1OTI5MjAwNywiaWF0IjoxNzU5Mjg4NDA3LCJqdGkiOiJhYmU2OWY1Ny00ZjgwLTQyZTktYTE2My0yNjFlNGJlYTIwMjciLCJlbWFpbCI6InZpbmljaXVzQGdtYWlsLmNvbSJ9.PS2BrIyRe3Ri08URFO8duzZNQT3CnPmvuerVNdGPWgBvEaw4D6tcFyukzsCMPmnFcZf4KsLcXwQuOVKNdqsczI9rVdEDtnyuqEAgei3_7swJn8gmrncbwB7cGZyuGF4n_XMMkUGpA6p1Kdby_-Xng3_H31F4pLKvKQrB4DJdHS1HFxR9IGGOv9pepdbfNrojstzF0FgUjPTGBPjNavMafpJ7KArkklTUfaQSgHfrcR9_oswZvRigqhGLTRTzm_u5MlLCEOzXAzrt_ux2Lrm6w9q7KXsHz2D5ttkfwTfDd6jG_DNWgo9LWBbaC1J9TRpdFfdVIuzFEJkbSQwGl3MiGw"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "date",
+							"value": "Wed, 01 Oct 2025 03:25:22 GMT"
+						},
+						{
+							"name": "content-type",
+							"value": "application/json"
+						},
+						{
+							"name": "content-length",
+							"value": "372"
+						},
+						{
+							"name": "x-amzn-requestid",
+							"value": "642a183e-0d96-4d02-b0d7-617d4b621295"
+						},
+						{
+							"name": "x-amzn-remapped-content-length",
+							"value": "372"
+						},
+						{
+							"name": "x-amzn-remapped-connection",
+							"value": "close"
+						},
+						{
+							"name": "x-amz-apigw-id",
+							"value": "Rv3NXFK7oAMEIaw="
+						},
+						{
+							"name": "x-amzn-remapped-server",
+							"value": "Werkzeug/3.1.3 Python/3.11.13"
+						},
+						{
+							"name": "x-amzn-remapped-date",
+							"value": "Wed, 01 Oct 2025 03:25:22 GMT"
+						}
+					],
+					"content": {
+						"size": 372,
+						"mimeType": "application/json",
+						"text": "[{\"codigoAtividade\":\"RUN\",\"dataHora\":\"2000-09-30T07:30:00\",\"descricaoAtividade\":\"correr 5km editado\",\"funcional\":\"1234567\",\"id\":2},{\"codigoAtividade\":\"GYM\",\"dataHora\":\"2025-09-25T08:26:00\",\"descricaoAtividade\":\"correr 5km\",\"funcional\":\"12345\",\"id\":3},{\"codigoAtividade\":\"GYM\",\"dataHora\":\"2025-09-25T08:26:00\",\"descricaoAtividade\":\"correr 5km\",\"funcional\":\"12345\",\"id\":5}]\n"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 179.79500000000002,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Listar todas as atividades registradas"
+			},
+			{
+				"startedDateTime": "2025-10-01T04:51:06.049Z",
+				"time": 0,
+				"request": {
+					"method": "GET",
+					"url": "https://nucu3l8xaf.execute-api.us-east-1.amazonaws.com/dev/atividades?dataHora_inicio=1999-09-30T07%3A30%3A00&dataHora_fim=2001-01-01T07%3A30%3A00",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Listar todas as atividades registradas (data)"
+			},
+			{
+				"startedDateTime": "2025-10-01T04:51:06.049Z",
+				"time": 0,
+				"request": {
+					"method": "GET",
+					"url": "https://nucu3l8xaf.execute-api.us-east-1.amazonaws.com/dev/atividades?dataHora_inicio=1999-09-30T07%3A30%3A00&dataHora_fim=2001-01-01T07%3A30%3A00",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Listar todas as atividades registradas varios filtros"
+			},
+			{
+				"startedDateTime": "2025-10-01T04:51:06.049Z",
+				"time": 164.438,
+				"request": {
+					"method": "GET",
+					"url": "https://nucu3l8xaf.execute-api.us-east-1.amazonaws.com/dev/atividades?page=1&per_page=100",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "date",
+							"value": "Wed, 01 Oct 2025 02:50:49 GMT"
+						},
+						{
+							"name": "content-type",
+							"value": "application/json"
+						},
+						{
+							"name": "content-length",
+							"value": "426"
+						},
+						{
+							"name": "x-amzn-requestid",
+							"value": "a6d92f23-a411-4c59-adfd-6650f0dfde36"
+						},
+						{
+							"name": "x-amzn-remapped-content-length",
+							"value": "426"
+						},
+						{
+							"name": "x-amzn-remapped-connection",
+							"value": "close"
+						},
+						{
+							"name": "x-amz-apigw-id",
+							"value": "RvyJiFFGoAMEbPA="
+						},
+						{
+							"name": "x-amzn-remapped-server",
+							"value": "Werkzeug/3.1.3 Python/3.11.13"
+						},
+						{
+							"name": "x-amzn-remapped-date",
+							"value": "Wed, 01 Oct 2025 02:50:49 GMT"
+						}
+					],
+					"content": {
+						"size": 426,
+						"mimeType": "application/json",
+						"text": "{\"items\":[{\"codigoAtividade\":\"RUN\",\"dataHora\":\"2000-09-30T07:30:00\",\"descricaoAtividade\":\"correr 5km editado\",\"funcional\":\"1234567\",\"id\":2},{\"codigoAtividade\":\"GYM\",\"dataHora\":\"2025-09-25T08:26:00\",\"descricaoAtividade\":\"correr 5km\",\"funcional\":\"12345\",\"id\":3},{\"codigoAtividade\":\"GYM\",\"dataHora\":\"2025-09-25T08:26:00\",\"descricaoAtividade\":\"correr 5km\",\"funcional\":\"12345\",\"id\":5}],\"page\":1,\"pages\":1,\"per_page\":100,\"total\":3}\n"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 164.438,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Listar todas as atividades registradas (paginação)"
+			},
+			{
+				"startedDateTime": "2025-10-01T04:51:06.049Z",
+				"time": 153.007,
+				"request": {
+					"method": "GET",
+					"url": "https://nucu3l8xaf.execute-api.us-east-1.amazonaws.com/dev/atividades/1234567",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/11.6.1"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "date",
+							"value": "Wed, 01 Oct 2025 02:51:12 GMT"
+						},
+						{
+							"name": "content-type",
+							"value": "application/json"
+						},
+						{
+							"name": "content-length",
+							"value": "132"
+						},
+						{
+							"name": "x-amzn-requestid",
+							"value": "a740c18e-a018-40ce-8c34-77044190a65a"
+						},
+						{
+							"name": "x-amzn-remapped-content-length",
+							"value": "132"
+						},
+						{
+							"name": "x-amzn-remapped-connection",
+							"value": "close"
+						},
+						{
+							"name": "x-amz-apigw-id",
+							"value": "RvyNFHkYIAMEVIA="
+						},
+						{
+							"name": "x-amzn-remapped-server",
+							"value": "Werkzeug/3.1.3 Python/3.11.13"
+						},
+						{
+							"name": "x-amzn-remapped-date",
+							"value": "Wed, 01 Oct 2025 02:51:12 GMT"
+						}
+					],
+					"content": {
+						"size": 132,
+						"mimeType": "application/json",
+						"text": "[{\"codigoAtividade\":\"RUN\",\"dataHora\":\"2000-09-30T07:30:00\",\"descricaoAtividade\":\"correr 5km editado\",\"funcional\":\"1234567\",\"id\":2}]\n"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 153.007,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Listar todas as atividades de um funcionário específico"
+			},
+			{
+				"startedDateTime": "2025-10-01T04:51:06.049Z",
+				"time": 0,
+				"request": {
+					"method": "GET",
+					"url": "https://nucu3l8xaf.execute-api.us-east-1.amazonaws.com/dev/atividades",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Authorization",
+							"value": "Bearer eyJraWQiOiJ2b3hKdkRpa2owbCtVVHZ0NFhUS0lhYVBmcVhzdENBeTg3NTlic0VyM3lRPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiZXhXTkktN2NwTmFoMnQxQXdxWFZDUSIsInN1YiI6IjA0NjgxNDk4LTUwODEtNzBiMS1mNGM3LTQ2ZmJlMmJlZDQyNCIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV84M2p1NGJCbHkiLCJjb2duaXRvOnVzZXJuYW1lIjoiMDQ2ODE0OTgtNTA4MS03MGIxLWY0YzctNDZmYmUyYmVkNDI0Iiwib3JpZ2luX2p0aSI6IjYyNGE0MzQ0LWYxZTktNDkwNC1hODgxLTNiMTVkNmQwZjZkMCIsImF1ZCI6IjNnOWlmb2Vnc2QydThkazl0bjltOTU2Z2doIiwiZXZlbnRfaWQiOiI4NzA3NzgxNC02ODAyLTRmMGMtODM3YS00NjNmZThjZTJlZWIiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTc1NTczMTQ1MCwiZXhwIjoxNzU1NzM1MDUwLCJpYXQiOjE3NTU3MzE0NTAsImp0aSI6ImQyZGI5ZjU1LTIzYjYtNDJjZC1iZDc2LWExNzIwMjEwZDFjNyIsImVtYWlsIjoidmluaWNpdXNAZ21haWwuY29tIn0.H4cviOUN06c2vz3rxct98dRDbcgDIVSjUbIOTopxNyVYMTnZd3ilJeo7ckdFIQEyuzFUcT0zoMiNujI7odngGDB2FPpxGixifTi2XYYm4CfXxjlXrkjVkAIabIluKMBd0DqrPVj5_JUCU5ygJu9Ex3ma95npm03ymoA_8FHixGuULyEm8GeCAydWg0BiX19Y7QiSNbGuNIqE2RrU8bwI8bprqb7DZGHJkZCnY-ScyL1NagVB01ZeuUC473calMG0NIcI4dIjDqW_Yd45fBIn1Z60HjwXaN_ILp1sX_o_WKU3eylam8WLHBEApzJDlVyOR0bxZT7ZlCFdzWgjJoOf6A"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Request Token"
+			}
+		]
+	}
+}
