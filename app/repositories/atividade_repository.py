@@ -48,3 +48,17 @@ class AtividadeRepository:
             "pages": pagination.pages,
             "per_page": pagination.per_page
         }
+        
+    @staticmethod
+    def get_by_id(id):
+        return Atividade.query.get(id)
+
+    @staticmethod
+    def update(atividade):
+        db_atividades.session.commit()
+        return atividade
+
+    @staticmethod
+    def delete(atividade):
+        db_atividades.session.delete(atividade)
+        db_atividades.session.commit()
